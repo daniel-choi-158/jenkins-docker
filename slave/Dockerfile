@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y openjdk-8-jre curl python python-pip gi
 RUN easy_install jenkins-webapi
  
 # Get docker-compose in the agent container
-RUN curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
+RUN curl -L https://github.com/docker/compose/releases/download/1.24.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
 RUN mkdir -p /home/jenkins
 RUN mkdir -p /var/lib/jenkins
  
